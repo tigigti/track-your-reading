@@ -1,0 +1,8 @@
+.card-nav {
+    height: 40px;
+}
+
+.card-nav h1 {
+    line-height: 40px !important;
+    height: 40px !important;
+}
