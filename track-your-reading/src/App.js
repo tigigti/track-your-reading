@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
+import Home from "./components/home";
 
 class App extends Component {
 
@@ -30,7 +31,7 @@ class App extends Component {
             <Sidebar toggleFn={this.toggleNav.bind(this)} open={this.state.navOpen}/>
             <div>
               <Route exact path="/"
-                render={()=> <h1>Homepage here</h1>}
+                render={(props)=> <Home {...props} test="passing props"/>}
               ></Route>
               <Route path="/about"
                 render={()=> <h2>And about page will be here</h2>}
