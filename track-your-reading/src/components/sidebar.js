@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
+import "./css/sidebar.css";
 
 class Sidebar extends React.Component {
 
