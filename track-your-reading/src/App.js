@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import muiTheme from "./components/customTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
@@ -20,13 +21,13 @@ class App extends Component {
   toggleNav(){
     this.setState((prev,props)=>({
       navOpen: !prev.navOpen
-    }))
+    }));
   }
 
   render() {
     return (
       <Router>
-        <MuiThemeProvider>
+        <MuiThemeProvider muiTheme={muiTheme}>
           <div>
             <Navbar toggleFn={this.toggleNav.bind(this)}/>
             <Sidebar loggedIn={this.state.loggedIn} toggleFn={this.toggleNav.bind(this)} open={this.state.navOpen}/>
