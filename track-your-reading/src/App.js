@@ -12,7 +12,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      navOpen: false
+      navOpen: false,
+      loggedIn: true
     }
   }
 
@@ -28,8 +29,8 @@ class App extends Component {
         <MuiThemeProvider>
           <div>
             <Navbar toggleFn={this.toggleNav.bind(this)}/>
-            <Sidebar toggleFn={this.toggleNav.bind(this)} open={this.state.navOpen}/>
-            <div>
+            <Sidebar loggedIn={this.state.loggedIn} toggleFn={this.toggleNav.bind(this)} open={this.state.navOpen}/>
+            <div className="container">
               <Route exact path="/"
                 render={(props)=> <Home {...props} test="passing props"/>}
               ></Route>

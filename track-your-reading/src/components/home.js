@@ -9,7 +9,7 @@ class Home extends Component {
 
     render(){
         return(
-            <h2>Homepage here</h2>
+            <h2>Homepage here - {this.props.test}</h2>
         );
     }
 }

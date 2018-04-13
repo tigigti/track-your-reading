@@ -4,6 +4,14 @@ import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
 import "./css/sidebar.css";
 
+function UserLink(props){
+    let loggedIn = props.loggedIn;
+    if(loggedIn){
+        return <Link to="/dashboard">User</Link>;
+    }
+    return <Link to="/login">Log in</Link>
+}
+
 class Sidebar extends React.Component {
 
     render(){
@@ -20,6 +28,10 @@ class Sidebar extends React.Component {
                 <MenuItem
                     onClick={this.props.toggleFn}>
                     <Link to="/about">About</Link>
+                </MenuItem>
+                <MenuItem
+                    onClick={this.props.toggleFn}>
+                    <UserLink loggedIn={this.props.loggedIn}/>
                 </MenuItem>
             </Drawer> 
         );
