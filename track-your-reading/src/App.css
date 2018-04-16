@@ -3,29 +3,3 @@
   margin: auto;
   padding: 0 5px;
 }
-
-/*
-@media screen and (min-width: 576px){
-  .container {
-    padding: 0 20px;
-  }
-}
-
-@media screen and (min-width:768px){
-  .container {
-    padding: 0 60px;
-  }
-}
-
-@media screen and (min-width: 992px){
-  .container {
-    padding: 0 80px;
-  }
-}
-
-@media screen and (min-width: 1024px){
-  .container {
-    padding: 0 120px;
-  }
-}
-*/
