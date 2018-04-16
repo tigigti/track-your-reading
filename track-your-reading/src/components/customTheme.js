@@ -1,14 +1,11 @@
 import {
-    cyan500, cyan700,
-    pinkA200,
-    grey100, grey300, grey400, grey500,
-    white, darkBlack, fullBlack,
+    green500, 
   } from 'material-ui/styles/colors';
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 
 const muiTheme = getMuiTheme({
     palette: {
-        primary1Color: pinkA200
+        primary1Color: green500
     },
     appBar: {
     }
