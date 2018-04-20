@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       navOpen: false,
-      loggedIn: true
+      loggedIn: false
     }
   }
 

@@ -9,7 +9,15 @@ function UserLink(props){
     if(loggedIn){
         return <Link to="/dashboard">User</Link>;
     }
-    return <Link to="/login">Log in</Link>
+    return <Link to="/login">Log in</Link>;
+}
+
+function RegisterLink(props){
+    let loggedIn = props.loggedIn;
+    if(!loggedIn){
+        return <Link to="/register">Register</Link>;
+    }
+    return <Link to="/logout">Log out</Link>;
 }
 
 class Sidebar extends React.Component {
@@ -32,6 +40,10 @@ class Sidebar extends React.Component {
                 <MenuItem
                     onClick={this.props.toggleFn}>
                     <UserLink loggedIn={this.props.loggedIn}/>
+                </MenuItem>
+                <MenuItem
+                    onClick={this.props.toggleFn}>
+                    <RegisterLink loggedIn={this.props.loggedIn}/>
                 </MenuItem>
             </Drawer> 
         );
