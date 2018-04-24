@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       navOpen: false,
-      loggedIn: false
+      loggedIn: true
     }
   }
 
@@ -33,7 +33,7 @@ class App extends Component {
             <Sidebar loggedIn={this.state.loggedIn} toggleFn={this.toggleNav.bind(this)} open={this.state.navOpen}/>
             <div className="container">
               <Route exact path="/"
-                render={(props)=> <Home {...props} test="passing props"/>}
+                render={(props)=> <Home {...props} loggedIn={this.state.loggedIn}/>}
               ></Route>
               <Route path="/about"
                 render={()=> <h2>And about page will be here</h2>}

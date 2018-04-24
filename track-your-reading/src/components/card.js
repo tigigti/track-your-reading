@@ -1,27 +1,23 @@
 import React, {Component} from "react";
 import Paper from "material-ui/Paper";
-import AppBar from "material-ui/AppBar";
 import "./css/card.css";
 
-class Card extends Component {
+const style = {
+    padding: "5px 10px",
+    marginBottom: 20
+}
 
+class Card extends Component {
     render(){
         return(
-            <div style={{
-                width: "100%",
-                position: "relative",
-                maxWidth: "800px",
-                margin: "40px auto 0 auto"}}>
-                <AppBar showMenuIconButton={false} title={this.props.title} className="card-nav"/>
-                <Paper style={{
-                    width: "100%",
-                    padding: "8px"
-                }} zDepth={1}>
-                    {this.props.component}
+            <a href={this.props.linkTo}>  
+                <Paper className="change-on-hover" style={style} zDepth={1}>
+                    <h1>{this.props.amount}</h1>
+                    <h3>{this.props.subtitle}</h3>
                 </Paper>
-            </div>
-        )
-    }
-}
+            </a>
+        );
+    };
+};
 
 export default Card;

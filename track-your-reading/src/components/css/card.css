@@ -1,8 +1,8 @@
-.card-nav {
-    height: 40px;
+a {
+    text-decoration: none;
+    min-width: 150px;
 }
 
-.card-nav h1 {
-    line-height: 40px !important;
-    height: 40px !important;
+.change-on-hover:hover {
+    background-color: #4caf50 !important;
 }
