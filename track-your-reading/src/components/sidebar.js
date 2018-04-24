@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
+import ActionHome from "material-ui/svg-icons/action/home";
 import "./css/sidebar.css";
 
 function UserLink(props){
@@ -20,6 +21,9 @@ function RegisterLink(props){
     return <Link to="/logout">Log out</Link>;
 }
 
+const iconStyle = {
+}
+
 class Sidebar extends React.Component {
 
     render(){
@@ -31,7 +35,7 @@ class Sidebar extends React.Component {
             onRequestChange={this.props.toggleFn}>
                 <MenuItem
                     onClick={this.props.toggleFn}>
-                    <Link to="/">Home</Link>
+                    <Link to="/"><ActionHome style={iconStyle}/><span>Home</span></Link>
                 </MenuItem>
                 <MenuItem
                     onClick={this.props.toggleFn}>
