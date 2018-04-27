@@ -22,6 +22,7 @@ function RegisterLink(props){
 }
 
 const iconStyle = {
+    marginRight: ".5em"
 }
 
 class Sidebar extends React.Component {
@@ -35,7 +36,7 @@ class Sidebar extends React.Component {
             onRequestChange={this.props.toggleFn}>
                 <MenuItem
                     onClick={this.props.toggleFn}>
-                    <Link to="/"><ActionHome style={iconStyle}/><span>Home</span></Link>
+                    <Link to="/" className="menu-item-flex"><ActionHome style={iconStyle}/><span>Home</span></Link>
                 </MenuItem>
                 <MenuItem
                     onClick={this.props.toggleFn}>
