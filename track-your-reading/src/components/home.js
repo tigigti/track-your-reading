@@ -18,10 +18,16 @@ function HomeDisplay(props){
     const loggedIn = props.loggedIn;
     if(loggedIn){
         return(
-            <div className="card-container">
-                <Card amount="10" subtitle="Books Read" linkTo="#booksRead"/>
-                <Card amount="20" subtitle="To Read" linkTo="#toRead"/>
-                <Card amount="80%" subtitle="Progress" linkTo="#progress"/>
+            <div className="row">
+                <div className="col-md-4 col-xs-12">
+                    <Card amount="10" subtitle="Books Read" linkTo="#booksRead"/>
+                </div>
+                <div className="col-md-4 col-xs-12">
+                    <Card amount="20" subtitle="To Read" linkTo="#toRead"/>
+                </div>
+                <div className="col-md-4 col-xs-12">
+                    <Card amount="80%" subtitle="Progress" linkTo="#progress"/>
+                </div>
             </div>
         );
     };
