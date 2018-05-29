@@ -3,22 +3,26 @@ import { Link } from "react-router-dom";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
 import ActionHome from "material-ui/svg-icons/action/home";
+import Code from "material-ui/svg-icons/action/code";
+import Lock from "material-ui/svg-icons/action/lock";
+import LockOpen from "material-ui/svg-icons/action/lock-open";
+import ActionAccountCircle from "material-ui/svg-icons/action/account-circle";
 import "./css/sidebar.css";
 
 function UserLink(props){
     let loggedIn = props.loggedIn;
     if(loggedIn){
-        return <Link to="/dashboard">User</Link>;
+        return <Link to="/dashboard" className="menu-item-flex"><ActionAccountCircle style={iconStyle}/><span>User</span></Link>;
     }
-    return <Link to="/login">Log in</Link>;
+    return <Link to="/login" className="menu-item-flex"><Lock style={iconStyle}/><span>Log in</span></Link>;
 }
 
 function RegisterLink(props){
     let loggedIn = props.loggedIn;
     if(!loggedIn){
-        return <Link to="/register">Register</Link>;
+        return <Link to="/register" className="menu-item-flex"><ActionAccountCircle style={iconStyle}/><span>Register</span></Link>;
     }
-    return <Link to="/logout">Log out</Link>;
+    return <Link to="/logout" className="menu-item-flex"><LockOpen style={iconStyle}/><span>Log out</span></Link>;
 }
 
 const iconStyle = {
@@ -40,7 +44,7 @@ class Sidebar extends React.Component {
                 </MenuItem>
                 <MenuItem
                     onClick={this.props.toggleFn}>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" className="menu-item-flex"><Code style={iconStyle}/><span>About</span></Link>
                 </MenuItem>
                 <MenuItem
                     onClick={this.props.toggleFn}>
